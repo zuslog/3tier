@@ -1,0 +1,23 @@
+dnf -y install git
+
+git config --global user.name "tablehun"
+git config --global user.email "leeshun0904@naver.com"
+git init
+
+git add 파일명 (git add . = 현 디렉터리 전체 다)
+위 내용 추가 안될 시
+-> git config --gloval --add safe.dirctory 파일경로  // 이후 다시 add 하기
+
+git commit -m "메모"
+git remote add origin https://github.com/tablehun/3tier.git
+
+[root@localhost ~]# git push -u origin master
+★Username for 'https://github.com': tablehun
+★Password for 'https://tablehun@github.com': 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
+
+push 오류 뜰 때
+iptables -A INPUT -p tcp --dport 443 -d github.com -j ACCEPT 
+
+위 명령어 이후 오류 시 
+
+git pull origin master or git push -f origin master 사용
